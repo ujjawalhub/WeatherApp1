@@ -1,0 +1,78 @@
+<!--<body >
+    <div class="container h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+      
+</body>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-8">
+        <div class="w-25 p-3 h-25 d-inline-block">
+          <i class="wi wi-yahoo-23 "></i><br>
+        </div>
+          
+        <h2 [innerHTML]=" result.query.results.channel.item.condition.text "></h2><br>
+    
+        <h3 [innerHTML]=" result.query.results.channel.location.city "></h3><br>
+              
+        <h4 [innerHTML]=" result.query.results.channel.location.country "></h4><br>
+          
+        <p [innerHTML]=" result.query.results.channel.item.condition.temp "></p><br>
+              
+        <p [innerHTML]=" result.query.results.channel.item.condition.code "></p><br>
+          
+        <ng-container  *ngFor="let cast of result.query.results.channel.item.forecast">
+          <h6>{{ cast?.code }}</h6><br>
+          <h6>{{ cast?.date }}</h6><br>
+          <h6>{{ cast?.day }}</h6><br>
+        </ng-container>
+      </div>
+    </div>
+    <div class="col">
+          3 of 3gggggg
+    </div>
+  </div>
+</body>-->
+<body>
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+          </div>
+          <div class="col">
+              <div class="w-25 p-3 h-20 d-inline-block">
+                  <i class="wi wi-yahoo-23 "></i><br>
+                </div>          </div>
+          <div class="col">
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+          </div>
+          <div class="col">
+              <h2 [innerHTML]=" result.query.results.channel.item.condition.text "></h2><br>
+    
+              <h3 [innerHTML]=" result.query.results.channel.location.city "></h3><br>
+                    
+              <h4 [innerHTML]=" result.query.results.channel.location.country "></h4><br>
+                
+              <p [innerHTML]=" result.query.results.channel.item.condition.temp "></p><br>
+                    
+              <p [innerHTML]=" result.query.results.channel.item.condition.temp "></p><br>    
+              
+              <p>{{ code | async }}</p>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+        <div class="row align-items-end">
+            <ng-container  *ngFor="let cast of result.query.results.channel.item.forecast">
+                <h6>{{ cast?.code }}</h6><br>
+                <h6>{{ cast?.date }}</h6><br>
+                <h6>{{ cast?.day }}</h6><br>
+              </ng-container>
+        </div>
+      </div>
+</body>
+  
